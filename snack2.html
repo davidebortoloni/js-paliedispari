@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
+        integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css'
+        integrity='sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA=='
+        crossorigin='anonymous' />
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Boolean Snacks - Second Snack</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-md">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                    <a href="./index.html">
+                        <h1>Boolean Snacks</h1>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <div id="menu-desktop" class="d-none d-lg-block">
+                        <ul>
+                            <li><a href="./snack1.html">Palindrome Word</a></li>
+                            <li class="active"><a href="#">Even & Odd</a></li>
+                        </ul>
+                    </div>
+                    <div class="d-lg-none">
+                        <div id="menu-icon">
+                            <i class="fas fa-bars"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div id="menu-mobile" class="invisible">
+                            <ul>
+                                <li><a href="./snack1.html">Palindrome Word</a>
+                                    <hr>
+                                </li>
+                                <li class="active"><a href="#">Even & Odd</a>
+                                    <hr>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <button id="start-button" class="btn rounded-pill bg-grey p-5 mb-4">Inserisci numero</button>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/even-odd.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

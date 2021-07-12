@@ -1,0 +1,18 @@
+.bg-grey {
+    background-color: #181818;
+}
+.btn.bg-grey {
+    color: white;
+    border-color: transparent;
+    border-width: 2px;
+}
+.btn.bg-grey:hover {
+    color: #181818;
+    border-color: #181818;
+    background-color: white;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
