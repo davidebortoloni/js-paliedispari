@@ -53,11 +53,44 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class="row text-center">
+        <div class="container-md">
+            <div class="row text-center g-4">
                 <div class="col-12">
-                    <button id="start-button" class="btn rounded-pill bg-grey p-5 mb-4">Inserisci numero</button>
+                    <div id="even-odd-section">
+                        <div>
+                            <h3>Fai una scelta</h3>
+                            <label for="even">Pari</label>
+                            <input name="even-odd" id="even" type="radio" value="even" checked>
+                            <label for="odd">Dispari</label>
+                            <input name="even-odd" id="odd" type="radio" value="odd">
+                        </div>
+                        <div>
+                            <button id="even-odd-button" class="btn rounded-pill bg-grey p-3 my-2">
+                                Prosegui
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div id="number-section" class="d-none">
+                        <div>
+                            <label for="number">Inserisci un numero</label>
+                            <input id="number" type="number" min="1" max="5" value="1">
+                        </div>
+                        <div>
+                            <button id="play-button" class="btn rounded-pill bg-grey p-3 my-2">
+                                Gioca
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
                     <div id="result"></div>
+                </div>
+                <div class="col-12">
+                    <button id="reset" class="d-none btn rounded-pill bg-grey p-3 my-2">
+                        Reset
+                    </button>
                 </div>
             </div>
         </div>

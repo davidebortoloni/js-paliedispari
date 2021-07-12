@@ -1,7 +1,7 @@
-checkButton = document.getElementById("check");
-resetButton = document.getElementById("reset");
-inputField = document.getElementById("word");
-resultDisplay = document.getElementById("result");
+var checkButton = document.getElementById("check");
+var resetButton = document.getElementById("reset");
+var inputField = document.getElementById("word");
+var resultDisplay = document.getElementById("result");
 
 checkButton.addEventListener("click", function () {
     var word = inputField.value;
@@ -11,9 +11,9 @@ checkButton.addEventListener("click", function () {
             result = "La parola inserita è palindroma";
         }
         resultDisplay.innerHTML = result;
+        checkButton.classList.add("d-none");
+        resetButton.classList.remove("d-none");
     }
-    checkButton.classList.add("d-none");
-    resetButton.classList.remove("d-none");
 })
 resetButton.addEventListener("click", function () {
     checkButton.classList.remove("d-none");
