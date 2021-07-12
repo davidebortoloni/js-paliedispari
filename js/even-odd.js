@@ -14,26 +14,31 @@ evenOddButton.addEventListener("click", function () {
 })
 playButton.addEventListener("click", function () {
     var userN = parseInt(inputNumber.value);
-    var pcN = randomNumberTo5();
-    var result;
-    if (evenOdd == "even") {
-        result = "La tua scelta: pari";
+    if (!isNaN(userN) && userN >= 1 && userN <= 5) {
+        var pcN = randomNumberTo5();
+        var result;
+        if (evenOdd == "even") {
+            result = "La tua scelta: pari";
+        } else {
+            result = "La tua scelta: dispari";
+        }
+        result += "<br>Il tuo numero: " + userN;
+        result += "<br>Il numero del pc: " + pcN;
+        if (evenOrOdd(userN, pcN) == evenOdd) {
+            result += "<h4>Hai vinto</h4>";
+        } else {
+            result += "<h4>Hai perso</h4>";
+        }
+        resultElement.innerHTML = result;
+        numberSection.classList.add("d-none");
+        resetButton.classList.remove("d-none");
     } else {
-        result = "La tua scelta: dispari";
+        alert("Inserire un numero compreso tra 1 e 5");
     }
-    result += "<br>Il tuo numero: " + userN;
-    result += "<br>Il numero del pc: " + pcN;
-    if (evenOrOdd(userN, pcN) == evenOdd) {
-        result += "<h4>Hai vinto</h4>";
-    } else {
-        result += "<h4>Hai perso</h4>";
-    }
-    resultElement.innerHTML = result;
-    numberSection.classList.add("d-none");
-    resetButton.classList.remove("d-none");
 })
 resetButton.addEventListener("click", function () {
     resultElement.innerHTML = "";
+    inputNumber.value = "1";
     evenOddSection.classList.remove("d-none");
     resetButton.classList.add("d-none");
 })
